@@ -1,0 +1,223 @@
+/* Warna Dasar & Variabel */
+:root {
+    --color-primary: #0056b3;
+    --color-primary-dark: #003d82;
+    --color-bg: #f8f9fa;
+    --color-text: #212529;
+    --color-text-light: #6c757d;
+    --color-border: #dee2e6;
+
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    --border-radius: 8px;
+    --font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Reset bawaan browser agar ukuran elemen lebih mudah diatur */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    /* Cegah munculnya scrollbar bawah (horizontal) kalau ada elemen yang terlalu lebar */
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+
+/* Wadah utama agar konten berada di tengah dan tidak melebar sampai ujung layar */
+.container {
+    width: min(100% - 2rem, 1120px);
+    margin-inline: auto;
+}
+
+/* Pengaturan Teks */
+h1,
+h2,
+h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: 1.75rem;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    max-width: 65ch;
+    /* Batasi lebar paragraf agar lebih enak dibaca */
+}
+
+/* Navigasi & Header */
+.site-header {
+    background-color: white;
+    padding-block: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.site-nav {
+    background-color: var(--color-primary);
+    padding-block: var(--spacing-sm);
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--spacing-sm);
+    display: inline-block;
+    border-radius: 4px;
+}
+
+/* Efek saat link disorot kursor */
+.nav-link:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Efek outline kuning saat navigasi menggunakan tombol Tab di keyboard */
+.nav-link:focus-visible {
+    outline: 3px solid #ffc107;
+    outline-offset: 2px;
+}
+
+/* Gambar */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-image {
+    border-radius: var(--border-radius);
+    margin-block: var(--spacing-xl);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian-bagian Eksperimen */
+.experiment-section {
+    padding-block: var(--spacing-xl);
+}
+
+.bg-light {
+    background-color: white;
+}
+
+/* Eksperimen CSS Cascade */
+.cascade-demo {
+    padding: var(--spacing-md);
+    background-color: white;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+.highlight-text {
+    color: var(--color-text-light);
+}
+
+.cascade-demo .special {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Eksperimen Box Model */
+.card {
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+}
+
+.box-model-demo {
+    background-color: #e9ecef;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+}
+
+.box-model-card {
+    /* Margin diatur secara eksplisit khusus untuk eksperimen ini */
+    margin: var(--spacing-md) auto;
+    max-width: 400px;
+}
+
+/* Tombol */
+.button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: var(--spacing-md);
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.button:focus-visible {
+    outline: 3px solid #ffc107;
+    outline-offset: 3px;
+}
+
+/* Tata Letak (Flexbox) & Layout Responsif */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    /* Setelan awal untuk layar HP: berbaris ke bawah (satu kolom) */
+    gap: var(--spacing-md);
+}
+
+.flex-item {
+    flex: 1 1 auto;
+    /* Elemen bisa membesar, mengecil, dan ukurannya fleksibel */
+}
+
+/* Aturan layout khusus untuk layar yang agak lebar (tablet atau laptop) */
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+        /* Ubah orientasi jadi menyamping (baris) */
+        flex-wrap: wrap;
+        /* Kalau ruangnya sempit, elemen akan turun ke baris baru */
+    }
+
+    .flex-item {
+        /* Tiap elemen mengambil sekitar sepertiga ruang yang ada */
+        flex: 1 1 calc(33.333% - var(--spacing-md));
+    }
+}
+
+/* Bagian Bawah Web (Footer) */
+.site-footer {
+    background-color: var(--color-text);
+    color: white;
+    text-align: center;
+    padding-block: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}

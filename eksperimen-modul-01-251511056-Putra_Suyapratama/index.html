@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Dasar Web — Modul 1</title>
+    <!-- Load stylesheet css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Semantic HTML (header) -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Belajar Dasar Web — Modul 1</h1>
+            <p>Eksperimen HTML dan CSS dasar tanpa framework.</p>
+        </div>
+    </header>
+
+    <!-- Semantic HTML (nav) -->
+    <nav class="site-nav" aria-label="Navigasi Utama">
+        <div class="container">
+            <ul>
+                <li><a href="#cascade" class="nav-link">Cascade & Specificity</a></li>
+                <li><a href="#box-model" class="nav-link">Box Model</a></li>
+                <li><a href="#flexbox" class="nav-link">Flexbox</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Semantic HTML (main) -->
+    <main>
+        <div class="container">
+            <!-- Load gambar -->
+            <img src="assets/hero.jpg" alt="Ilustrasi mahasiswa sedang belajar web development menggunakan laptop"
+                class="hero-image">
+        </div>
+
+        <!-- Cascade dan Specificity -->
+        <section id="cascade" class="experiment-section">
+            <div class="container">
+                <h2>Eksperimen Cascade dan Specificity</h2>
+                <article class="cascade-demo">
+                    <p class="highlight-text">Teks ini memiliki class <code>.highlight-text</code>.</p>
+                    <p class="highlight-text special">Teks ini memiliki class <code>.highlight-text</code> dan
+                        <code>.special</code>. Coba periksa di DevTools rule mana yang menang!
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Box Model -->
+        <section id="box-model" class="experiment-section">
+            <div class="container">
+                <h2>Eksperimen Box Model</h2>
+                <div class="box-model-demo">
+                    <div class="card box-model-card">
+                        <h3>Card Box Model</h3>
+                        <p>Inspeksi elemen ini menggunakan DevTools (tab Computed) untuk melihat ukuran Content,
+                            Padding, Border, dan Margin.</p>
+                        <a href="#" class="button">Tombol Contoh</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexbox dan Responsive Design -->
+        <section id="flexbox" class="experiment-section bg-light">
+            <div class="container">
+                <h2>Eksperimen Flexbox & Responsive</h2>
+                <p>Ubah ukuran layar (lebar 320px, 375px, 768px) untuk melihat perubahan layout menggunakan media query
+                    mobile-first.</p>
+                <div class="flex-container">
+                    <article class="card flex-item">
+                        <h3>Materi 1</h3>
+                        <p>Memahami struktur dasar dan semantik HTML.</p>
+                    </article>
+                    <article class="card flex-item">
+                        <h3>Materi 2</h3>
+                        <p>Menggunakan external CSS dan memahami cascade.</p>
+                    </article>
+                    <article class="card flex-item">
+                        <h3>Materi 3</h3>
+                        <p>Menata layout dengan Box Model dan Flexbox.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Semantic HTML (footer) -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Eksperimen Modul 1 || Putra Suyapratama (251511056).</p>
+        </div>
+    </footer>
+</body>
+
+</html>
