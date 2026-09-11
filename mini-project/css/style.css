@@ -265,62 +265,23 @@ a:focus-visible,
     margin-top: var(--space-lg);
 }
 
-/* Hero Illustration — CSS-only visual */
-.hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Hero Image — responsive */
+.hero-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
 }
 
-.hero-illust {
-    position: relative;
-    width: 240px;
-    height: 240px;
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, #C7D2FE 100%);
+/* Why Mentoring Image */
+.why-mentoring-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin-top: var(--space-md);
 }
 
-.illust-circle {
-    position: absolute;
-    border-radius: var(--radius-full);
-}
-
-.illust-circle--lg {
-    width: 180px;
-    height: 180px;
-    background: linear-gradient(135deg, #A5B4FC, #818CF8);
-    opacity: 0.2;
-    top: 30px;
-    left: 30px;
-}
-
-.illust-circle--md {
-    width: 110px;
-    height: 110px;
-    background: var(--color-primary);
-    opacity: 0.15;
-    top: 0;
-    right: 10px;
-}
-
-.illust-circle--sm {
-    width: 70px;
-    height: 70px;
-    background: var(--color-primary);
-    opacity: 0.1;
-    bottom: 10px;
-    left: 0;
-}
-
-.illust-emoji {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    line-height: 1;
-}
 
 /* ========================================
    8. Benefits Section
@@ -602,9 +563,8 @@ a:focus-visible,
         justify-content: flex-start;
     }
 
-    .hero-illust {
-        width: 280px;
-        height: 280px;
+    .hero-img {
+        max-width: 320px;
     }
 
     /* Steps — horizontal */
@@ -664,28 +624,8 @@ a:focus-visible,
         padding-block: 5rem 6rem;
     }
 
-    .hero-illust {
-        width: 320px;
-        height: 320px;
-    }
-
-    .illust-circle--lg {
-        width: 220px;
-        height: 220px;
-    }
-
-    .illust-circle--md {
-        width: 140px;
-        height: 140px;
-    }
-
-    .illust-circle--sm {
-        width: 90px;
-        height: 90px;
-    }
-
-    .illust-emoji {
-        font-size: 5rem;
+    .hero-img {
+        max-width: 420px;
     }
 
     .card {
