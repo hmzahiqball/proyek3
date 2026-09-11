@@ -1,0 +1,123 @@
+:root {
+    --warna-utama: #0284c7;        /* Biru gelap */
+    --warna-latar: #f8fafc;        /* Abu-abu sangat terang */
+    --warna-teks: #0f172a;         /* Abu-abu sangat gelap */
+    --spacing-dasar: 1rem;         /* Basis jarak 16px */
+    --warna-border: #e2e8f0;       /* Warna bingkai card */
+    --radius-dasar: 8px;           /* Sudut membulat */
+}
+
+/* 2. Reset ringan dan box sizing global */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 5. Menggunakan satu jenis font stack dan maksimal tiga ukuran teks (body: 1rem, h2: 1.5rem, h1: 2rem) */
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+    line-height: 1.6;
+    padding-top: calc(var(--spacing-dasar) * 2);
+    padding-bottom: calc(var(--spacing-dasar) * 2);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: calc(var(--spacing-dasar) * 1.5);
+    color: var(--warna-utama);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-dasar);
+    border-bottom: 2px solid var(--warna-border);
+    padding-bottom: calc(var(--spacing-dasar) * 0.5);
+}
+
+/* 4. Container agar konten tidak menempel pada tepi layar */
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-dasar);
+    padding-right: var(--spacing-dasar);
+}
+
+/* 5. Card dengan padding, border, dan radius yang konsisten */
+.card {
+    background-color: #ffffff;
+    border: 1px solid var(--warna-border);
+    border-radius: var(--radius-dasar);
+    padding: calc(var(--spacing-dasar) * 1.5);
+    margin-bottom: calc(var(--spacing-dasar) * 2);
+}
+
+.card img {
+    max-width: 150px;
+    border-radius: var(--radius-dasar);
+    margin-bottom: var(--spacing-dasar);
+    display: block;
+}
+
+.card ul {
+    margin-left: calc(var(--spacing-dasar) * 1.5);
+}
+
+/* Navigasi */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: calc(var(--spacing-dasar) * 1.5);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--warna-teks);
+    font-weight: 600;
+    padding: calc(var(--spacing-dasar) * 0.25) 0;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--warna-utama);
+    text-decoration: underline;
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--warna-utama);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* 6. Tombol Kontak */
+.button {
+    display: inline-block;
+    background-color: var(--warna-utama);
+    color: var(--warna-latar);
+    text-decoration: none;
+    padding: calc(var(--spacing-dasar) * 0.75) calc(var(--spacing-dasar) * 1.5);
+    border-radius: var(--radius-dasar);
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: calc(var(--spacing-dasar) * 0.5);
+}
+
+.button:hover {
+    background-color: #0369a1; /* Warna lebih gelap untuk hover */
+    transform: translateY(-2px);
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--warna-teks);
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    opacity: 0.7;
+    margin-top: calc(var(--spacing-dasar) * 2);
+}
